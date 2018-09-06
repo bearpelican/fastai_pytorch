@@ -141,4 +141,9 @@ def apply_tfms(tfms, x, do_resolve=True, xtra=None, aspect=None, size=None,
         x = tfm(x)
     return x.px
 
+def resize_crop(size=None, do_crop=False, mult=32, rand_crop=False):
+    crop_kw = {'row_pct':(0,1.),'col_pct':(0,1.)} if rand_crop else {}
+    return [resize_image(size=size, do_crop=do_crop, mult=mult),
+           crop_pad(size=size, mult=mult, **crop_kw)]
+
 def rand_zoom(*args, **kwargs): return zoom(*args, row_pct=(0,1), col_pct=(0,1), **kwargs)
