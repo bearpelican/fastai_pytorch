@@ -11783,25 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This packages should contain all you need to create documentation notebooks. The skeleton auto-generated will contain the a table of contents then all the function and classes written inside the module (default behavior). If you want to exclude some of the functions or classes, you should create an attribute __all__ in your module that will contain all the functions and classes you want to see inside the documentation.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Important note:</strong> Deleting cells auto-generated isn't recommended since they will appear again during the next update.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Auto-generated cells are code cells with an invisible input. This insures that the notebook is up to date with the code each time it is reexecuted. The first auto-generated cell import the nbdoc module and the next ones create the table of contents with the command get_module_doc. Before modifying a notebook, be sure to execute the invisible cells with the imports!</p>
+<p>Type an introduction of the package here.</p>
 
 </div>
 </div>
@@ -11840,15 +11822,6 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You then get one cell per function and class selected, with an anchor so that the table of content works. Those are generated with the command show_doc_from_name.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -11861,126 +11834,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=create_anchor></a><strong>create_anchor</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>name</strong>: the name of the anchor</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This creates an output cell with an html code for the anchor with the name given. You can then make a link to it in any Markdown cell by using</p>
-
-<pre><code>\[text\](#anchor_name).</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"> </div>
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=get_class_toc></a><strong>get_class_toc</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>mod_name</strong>: the name of the module containing the class</li>
-<li><strong>cls_name</strong>: the name of the class</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This create an output cell containing the table of contents with all the function of a given class. Note that the links only work inside the documentation of a given module (so the ones in this example won't since torch.nn isn't documented).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_class_toc</span><span class="p">(</span><span class="s1">&#39;torch.nn&#39;</span><span class="p">,</span><span class="s1">&#39;Module&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<ul>
-<li><a href="#Module.forward">Module.forward</a></li>
-<li><a href="#Module.register_buffer">Module.register_buffer</a></li>
-<li><a href="#Module.register_parameter">Module.register_parameter</a></li>
-<li><a href="#Module.add_module">Module.add_module</a></li>
-<li><a href="#Module._apply">Module._apply</a></li>
-<li><a href="#Module.apply">Module.apply</a></li>
-<li><a href="#Module.cuda">Module.cuda</a></li>
-<li><a href="#Module.cpu">Module.cpu</a></li>
-<li><a href="#Module.type">Module.type</a></li>
-<li><a href="#Module.float">Module.float</a></li>
-<li><a href="#Module.double">Module.double</a></li>
-<li><a href="#Module.half">Module.half</a></li>
-<li><a href="#Module.to">Module.to</a></li>
-<li><a href="#Module.register_backward_hook">Module.register_backward_hook</a></li>
-<li><a href="#Module.register_forward_pre_hook">Module.register_forward_pre_hook</a></li>
-<li><a href="#Module.register_forward_hook">Module.register_forward_hook</a></li>
-<li><a href="#Module._tracing_name">Module._tracing_name</a></li>
-<li><a href="#Module._slow_forward">Module._slow_forward</a></li>
-<li><a href="#Module.state_dict">Module.state_dict</a></li>
-<li><a href="#Module._load_from_state_dict">Module._load_from_state_dict</a></li>
-<li><a href="#Module.load_state_dict">Module.load_state_dict</a></li>
-<li><a href="#Module.parameters">Module.parameters</a></li>
-<li><a href="#Module.named_parameters">Module.named_parameters</a></li>
-<li><a href="#Module._all_buffers">Module._all_buffers</a></li>
-<li><a href="#Module.children">Module.children</a></li>
-<li><a href="#Module.named_children">Module.named_children</a></li>
-<li><a href="#Module.modules">Module.modules</a></li>
-<li><a href="#Module.named_modules">Module.named_modules</a></li>
-<li><a href="#Module.train">Module.train</a></li>
-<li><a href="#Module.eval">Module.eval</a></li>
-<li><a href="#Module.zero_grad">Module.zero_grad</a></li>
-<li><a href="#Module.share_memory">Module.share_memory</a></li>
-<li><a href="#Module._get_name">Module._get_name</a></li>
-<li><a href="#Module.extra_repr">Module.extra_repr</a></li>
-</ul>
+<p><a id=create_anchor></a><strong>create_anchor</strong>(<em>name</em>)</p>
 
 </div>
 
@@ -12002,212 +11856,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=get_fn_link></a><strong>get_fn_link</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>ft</strong>: the name of a function</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This function gives you the link you can use in markdown for a given function.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">gen_doc.gen_notebooks</span> <span class="k">import</span> <span class="n">create_module_page</span>
-<span class="n">get_fn_link</span><span class="p">(</span><span class="n">create_module_page</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;gen_doc.gen_notebooks.ipynb#create_module_page&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using it inside a mardown cell will give you a link that sends you there: <a href="gen_doc.gen_notebooks.html#create_module_page">link</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Important note:</strong> Anchors don't work in a notebook that hasn't been trusted (since the html content isn't available).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_from_name</span><span class="p">(</span><span class="s1">&#39;gen_doc.nbdoc&#39;</span><span class="p">,</span><span class="s1">&#39;get_module_toc&#39;</span><span class="p">,</span> <span class="n">arg_comments</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;mod_name&#39;</span><span class="p">:</span><span class="s1">&#39;the name of the module&#39;</span><span class="p">})</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=get_module_toc></a><strong>get_module_toc</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>mod_name</strong>: the name of the module</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This will display the table of contents of the module. Note that updating the module will automatically update this table of contents when the notebooks is re-executed.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_from_name</span><span class="p">(</span><span class="s1">&#39;gen_doc.nbdoc&#39;</span><span class="p">,</span><span class="s1">&#39;show_doc&#39;</span><span class="p">,</span>
-                   <span class="n">arg_comments</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;elt&#39;</span><span class="p">:</span> <span class="s1">&#39;the python function or class instance you want the doc of&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;doc_string&#39;</span><span class="p">:</span> <span class="s1">&#39;decides if you show the doc string or not&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;full_name&#39;</span><span class="p">:</span> <span class="s1">&#39;the full name of the function&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;arg_comments&#39;</span><span class="p">:</span> <span class="s1">&#39;a dictionnary adding comments for each argument&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;alt_doc_string&#39;</span><span class="p">:</span> <span class="s1">&#39;an additional text to display after the doc string (or in replacement if doc_string is False)&#39;</span><span class="p">})</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_doc></a><strong>show_doc</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>elt</strong>: the python function or class instance you want the doc of</li>
-<li><strong>doc_string</strong>: decides if you show the doc string or not, <em>default True</em></li>
-<li><strong>full_name</strong>: the full name of the function, <em>default None</em></li>
-<li><strong>arg_comments</strong>: a dictionnary adding comments for each argument, <em>default {}</em></li>
-<li><strong>alt_doc_string</strong>: an additional text to display after the doc string (or in replacement if doc_string is False), <em>default </em></li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is helpful to show the documentation of a function on the fly, a bit like ? in jupyter cells.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc</span><span class="p">(</span><span class="n">create_module_page</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=create_module_page></a><strong>create_module_page</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>mod_name</strong></li>
-<li><strong>dest_path</strong></li>
-</ul>
-<p>Creates the documentation notebook of a given module.</p>
+<p><a id=get_class_toc></a><strong>get_class_toc</strong>(<em>mod_name</em>, <em>cls_name</em>)</p>
 
 </div>
 
@@ -12229,15 +11878,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_doc_from_name></a><strong>show_doc_from_name</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>mod_name</strong>: the name of the module</li>
-<li><strong>ft_name</strong>: the name of the function</li>
-<li><strong>doc_string</strong>: decides if you show the doc string or not, <em>default True</em></li>
-<li><strong>arg_comments</strong>: a dictionnary adding comments for each argument, <em>default {}</em></li>
-<li><strong>alt_doc_string</strong>: an additional text to display after the doc string (or in replacement if doc_string is False), <em>default </em></li>
-</ul>
+<p><a id=get_fn_link></a><strong>get_fn_link</strong>(<em>ft</em>)</p>
 
 </div>
 
@@ -12246,16 +11887,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is the primary function to use when showing the documentation of a given function. Note that if the function is modified and arguments disappear/appear, it will be reflected in the notebook once it's re-executed.</p>
-<p>This function parses the argument and extracts the annotations for the type as well as the defaults.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -12269,11 +11900,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_video></a><strong>show_video</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>url</strong>: the url of the video</li>
-</ul>
+<p><a id=get_module_toc></a><strong>get_module_toc</strong>(<em>mod_name</em>)</p>
 
 </div>
 
@@ -12282,15 +11909,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Displays a cell containing the video. It should be an embedding link to work properly. For youtube videos, you should use the next function.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -12304,12 +11922,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_video_from_youtube></a><strong>show_video_from_youtube</strong></p>
-<p>Arguments:</p>
-<ul>
-<li><strong>code</strong>: the youtube code of the video</li>
-<li><strong>start</strong>: the start time in seconds, <em>default 0</em></li>
-</ul>
+<p><a id=show_doc></a><strong>show_doc</strong>(<em>elt</em>, <em>doc_string</em>=True, <em>full_name</em>=None, <em>arg_comments</em>={}, <em>alt_doc_string</em>=)</p>
 
 </div>
 
@@ -12318,27 +11931,8 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is a useful function if you want to link the concepts explained to a specific part of a video (for instance, the MOOK). If the link for a youtube video is <a href="https://youtu.be/IPBSB1HLNLo">https://youtu.be/IPBSB1HLNLo</a>, the code is the part from the / to the end.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_video_from_youtube</span><span class="p">(</span><span class="s1">&#39;IPBSB1HLNLo&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12346,12 +11940,56 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt"> </div>
 
 
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=show_doc_from_name></a><strong>show_doc_from_name</strong>(<em>mod_name</em>, <em>ft_name</em>, <em>doc_string</em>=True, <em>arg_comments</em>={}, <em>alt_doc_string</em>=)</p>
 
-<div class="output_html rendered_html output_subarea ">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IPBSB1HLNLo?start=0&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=show_video></a><strong>show_video</strong>(<em>url</em>)</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=show_video_from_youtube></a><strong>show_video_from_youtube</strong>(<em>code</em>, <em>start</em>=0)</p>
+
 </div>
 
 </div>
