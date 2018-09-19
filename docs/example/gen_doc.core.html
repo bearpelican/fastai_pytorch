@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="gen_doc.nbdoc">gen_doc.nbdoc<a class="anchor-link" href="#gen_doc.nbdoc">&#182;</a></h1>
+<h1 id="gen_doc.core">gen_doc.core<a class="anchor-link" href="#gen_doc.core">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11783,25 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This packages should contain all you need to create documentation notebooks. The skeleton auto-generated will contain the a table of contents then all the function and classes written inside the module (default behavior). If you want to exclude some of the functions or classes, you should create an attribute __all__ in your module that will contain all the functions and classes you want to see inside the documentation.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Important note:</strong> Deleting cells auto-generated isn't recommended since they will appear again during the next update.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Auto-generated cells are code cells with an invisible input. This insures that the notebook is up to date with the code each time it is reexecuted. The first auto-generated cell import the nbdoc module and the next ones create the table of contents with the command get_module_doc. Before modifying a notebook, be sure to execute the invisible cells with the imports!</p>
+<p>Type an introduction of the package here.</p>
 
 </div>
 </div>
@@ -11822,14 +11804,28 @@ div#notebook {
 
 <div class="output_markdown rendered_html output_subarea ">
 <ul>
-<li><a href="#create_anchor">create_anchor</a></li>
-<li><a href="#get_class_toc">get_class_toc</a></li>
-<li><a href="#get_fn_link">get_fn_link</a></li>
-<li><a href="#get_module_toc">get_module_toc</a></li>
-<li><a href="#show_doc">show_doc</a></li>
-<li><a href="#show_doc_from_name">show_doc_from_name</a></li>
-<li><a href="#show_video">show_video</a></li>
-<li><a href="#show_video_from_youtube">show_video_from_youtube</a></li>
+<li><a href="#annealing_cos">annealing_cos</a></li>
+<li><a href="#annealing_exp">annealing_exp</a></li>
+<li><a href="#annealing_linear">annealing_linear</a></li>
+<li><a href="#annealing_no">annealing_no</a></li>
+<li><a href="#annealing_poly">annealing_poly</a></li>
+<li><a href="#do_annealing_poly">do_annealing_poly</a></li>
+<li><a href="#example_function">example_function</a></li>
+<li><a href="#is_iterable">is_iterable</a></li>
+<li><a href="#is_listy">is_listy</a></li>
+<li><a href="#is_tuple">is_tuple</a></li>
+<li><a href="#linked_docstring_example">linked_docstring_example</a></li>
+<li><a href="#listify">listify</a></li>
+<li><a href="#Parentclass">Parentclass</a></li>
+<li><a href="#SmoothenValue">SmoothenValue</a><ul>
+<li><a href="#SmoothenValue.add_value">SmoothenValue.add_value</a></li>
+</ul>
+</li>
+<li><a href="#Subclass">Subclass</a><ul>
+<li><a href="#Subclass.update">Subclass.update</a></li>
+<li><a href="#Subclass.remove">Subclass.remove</a></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -11844,7 +11840,33 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You then get one cell per function and class selected, with an anchor so that the table of content works. Those are generated with the command show_doc_from_name.</p>
+<h3 id="Global-Variable-Definitions:">Global Variable Definitions:<a class="anchor-link" href="#Global-Variable-Definitions:">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>FileLike = Union[str, Path]</code> <div style="text-align: right"><a href="gen_doc/core.py#L9">[source]</a></div></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>Floats = Union[float, Collection[float]]</code> <div style="text-align: right"><a href="gen_doc/core.py#L10">[source]</a></div></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>AnnealingFt = Union[Callable[[float,float,float],float],Callable[[float,float,float,float],float]]</code> <div style="text-align: right"><a href="gen_doc/core.py#L11">[source]</a></div></p>
 
 </div>
 </div>
@@ -11861,126 +11883,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=create_anchor></a><strong>create_anchor</strong>(<em>name</em>)</p>
-<ul>
-<li><em>name</em>: the name of the anchor</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This creates an output cell with an html code for the anchor with the name given. You can then make a link to it in any Markdown cell by using</p>
-
-<pre><code>\[text\](#anchor_name).</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"> </div>
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=get_class_toc></a><strong>get_class_toc</strong>(<em>mod_name</em>, <em>cls_name</em>)</p>
-<ul>
-<li><em>mod_name</em>: the name of the module containing the class</li>
-<li><em>cls_name</em>: the name of the class</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This create an output cell containing the table of contents with all the function of a given class. Note that the links only work inside the documentation of a given module (so the ones in this example won't since torch.nn isn't documented).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_class_toc</span><span class="p">(</span><span class="s1">&#39;torch.nn&#39;</span><span class="p">,</span><span class="s1">&#39;Module&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<ul>
-<li><a href="#Module.forward">Module.forward</a></li>
-<li><a href="#Module.register_buffer">Module.register_buffer</a></li>
-<li><a href="#Module.register_parameter">Module.register_parameter</a></li>
-<li><a href="#Module.add_module">Module.add_module</a></li>
-<li><a href="#Module._apply">Module._apply</a></li>
-<li><a href="#Module.apply">Module.apply</a></li>
-<li><a href="#Module.cuda">Module.cuda</a></li>
-<li><a href="#Module.cpu">Module.cpu</a></li>
-<li><a href="#Module.type">Module.type</a></li>
-<li><a href="#Module.float">Module.float</a></li>
-<li><a href="#Module.double">Module.double</a></li>
-<li><a href="#Module.half">Module.half</a></li>
-<li><a href="#Module.to">Module.to</a></li>
-<li><a href="#Module.register_backward_hook">Module.register_backward_hook</a></li>
-<li><a href="#Module.register_forward_pre_hook">Module.register_forward_pre_hook</a></li>
-<li><a href="#Module.register_forward_hook">Module.register_forward_hook</a></li>
-<li><a href="#Module._tracing_name">Module._tracing_name</a></li>
-<li><a href="#Module._slow_forward">Module._slow_forward</a></li>
-<li><a href="#Module.state_dict">Module.state_dict</a></li>
-<li><a href="#Module._load_from_state_dict">Module._load_from_state_dict</a></li>
-<li><a href="#Module.load_state_dict">Module.load_state_dict</a></li>
-<li><a href="#Module._named_members">Module._named_members</a></li>
-<li><a href="#Module.parameters">Module.parameters</a></li>
-<li><a href="#Module.named_parameters">Module.named_parameters</a></li>
-<li><a href="#Module.buffers">Module.buffers</a></li>
-<li><a href="#Module.named_buffers">Module.named_buffers</a></li>
-<li><a href="#Module.children">Module.children</a></li>
-<li><a href="#Module.named_children">Module.named_children</a></li>
-<li><a href="#Module.modules">Module.modules</a></li>
-<li><a href="#Module.named_modules">Module.named_modules</a></li>
-<li><a href="#Module.train">Module.train</a></li>
-<li><a href="#Module.eval">Module.eval</a></li>
-<li><a href="#Module.zero_grad">Module.zero_grad</a></li>
-<li><a href="#Module.share_memory">Module.share_memory</a></li>
-<li><a href="#Module._get_name">Module._get_name</a></li>
-<li><a href="#Module.extra_repr">Module.extra_repr</a></li>
-</ul>
+<p><a id=annealing_cos></a><strong>annealing_cos</strong>(<em>start</em>: float, <em>end</em>: float, <em>pct</em>: float) -&gt; float<div style="text-align: right"><a href="gen_doc/core.py#L70">[source]</a></div></p>
 
 </div>
 
@@ -12002,204 +11905,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=get_fn_link></a><strong>get_fn_link</strong>(<em>ft</em>)</p>
-<ul>
-<li><em>ft</em>: the name of a function</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This function gives you the link you can use in markdown for a given function.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">gen_doc.gen_notebooks</span> <span class="k">import</span> <span class="n">create_module_page</span>
-<span class="n">get_fn_link</span><span class="p">(</span><span class="n">create_module_page</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;gen_doc.gen_notebooks.ipynb#create_module_page&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using it inside a mardown cell will give you a link that sends you there: <a href="gen_doc.gen_notebooks.html#create_module_page">link</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Important note:</strong> Anchors don't work in a notebook that hasn't been trusted (since the html content isn't available).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_from_name</span><span class="p">(</span><span class="s1">&#39;gen_doc.nbdoc&#39;</span><span class="p">,</span><span class="s1">&#39;get_module_toc&#39;</span><span class="p">,</span> <span class="n">arg_comments</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;mod_name&#39;</span><span class="p">:</span><span class="s1">&#39;the name of the module&#39;</span><span class="p">})</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=get_module_toc></a><strong>get_module_toc</strong>(<em>mod_name</em>)</p>
-<ul>
-<li><em>mod_name</em>: the name of the module</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This will display the table of contents of the module. Note that updating the module will automatically update this table of contents when the notebooks is re-executed.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_from_name</span><span class="p">(</span><span class="s1">&#39;gen_doc.nbdoc&#39;</span><span class="p">,</span><span class="s1">&#39;show_doc&#39;</span><span class="p">,</span>
-                   <span class="n">arg_comments</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;elt&#39;</span><span class="p">:</span> <span class="s1">&#39;the python function or class instance you want the doc of&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;doc_string&#39;</span><span class="p">:</span> <span class="s1">&#39;decides if you show the doc string or not&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;full_name&#39;</span><span class="p">:</span> <span class="s1">&#39;the full name of the function&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;arg_comments&#39;</span><span class="p">:</span> <span class="s1">&#39;a dictionnary adding comments for each argument&#39;</span><span class="p">,</span>
-                                 <span class="s1">&#39;alt_doc_string&#39;</span><span class="p">:</span> <span class="s1">&#39;an additional text to display after the doc string (or in replacement if doc_string is False)&#39;</span><span class="p">})</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_doc></a><strong>show_doc</strong>(<em>elt</em>, <em>doc_string</em>=True, <em>full_name</em>=None, <em>arg_comments</em>={}, <em>alt_doc_string</em>=)</p>
-<ul>
-<li><em>elt</em>: the python function or class instance you want the doc of</li>
-<li><em>doc_string</em>: decides if you show the doc string or not</li>
-<li><em>full_name</em>: the full name of the function</li>
-<li><em>arg_comments</em>: a dictionnary adding comments for each argument</li>
-<li><em>alt_doc_string</em>: an additional text to display after the doc string (or in replacement if doc_string is False)</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is helpful to show the documentation of a function on the fly, a bit like ? in jupyter cells.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc</span><span class="p">(</span><span class="n">create_module_page</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p><a id=create_module_page></a><strong>create_module_page</strong>(<em>mod_name</em>, <em>dest_path</em>)</p>
-<p>Creates the documentation notebook of a given module</p>
+<p><a id=annealing_exp></a><strong>annealing_exp</strong>(<em>start</em>: float, <em>end</em>: float, <em>pct</em>: float) -&gt; float<div style="text-align: right"><a href="gen_doc/core.py#L69">[source]</a></div></p>
 
 </div>
 
@@ -12221,14 +11927,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_doc_from_name></a><strong>show_doc_from_name</strong>(<em>mod_name</em>, <em>ft_name</em>, <em>doc_string</em>=True, <em>arg_comments</em>={}, <em>alt_doc_string</em>=)</p>
-<ul>
-<li><em>mod_name</em>: the name of the module</li>
-<li><em>ft_name</em>: the name of the function</li>
-<li><em>doc_string</em>: decides if you show the doc string or not</li>
-<li><em>arg_comments</em>: a dictionnary adding comments for each argument</li>
-<li><em>alt_doc_string</em>: an additional text to display after the doc string (or in replacement if doc_string is False)</li>
-</ul>
+<p><a id=annealing_linear></a><strong>annealing_linear</strong>(<em>start</em>: float, <em>end</em>: float, <em>pct</em>: float) -&gt; float<div style="text-align: right"><a href="gen_doc/core.py#L68">[source]</a></div></p>
 
 </div>
 
@@ -12237,16 +11936,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is the primary function to use when showing the documentation of a given function. Note that if the function is modified and arguments disappear/appear, it will be reflected in the notebook once it's re-executed.</p>
-<p>This function parses the argument and extracts the annotations for the type as well as the defaults.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -12260,10 +11949,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_video></a><strong>show_video</strong>(<em>url</em>)</p>
-<ul>
-<li><em>url</em>: the url of the video</li>
-</ul>
+<p><a id=annealing_no></a><strong>annealing_no</strong>(<em>start</em>: float, <em>end</em>: float, <em>pct</em>: float) -&gt; float<div style="text-align: right"><a href="gen_doc/core.py#L67">[source]</a></div></p>
 
 </div>
 
@@ -12272,15 +11958,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Displays a cell containing the video. It should be an embedding link to work properly. For youtube videos, you should use the next function.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -12294,11 +11971,7 @@ div#notebook {
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<p><a id=show_video_from_youtube></a><strong>show_video_from_youtube</strong>(<em>code</em>, <em>start</em>=0)</p>
-<ul>
-<li><em>code</em>: the youtube code of the video</li>
-<li><em>start</em>: the start time in seconds</li>
-</ul>
+<p><a id=annealing_poly></a><strong>annealing_poly</strong>(<em>degree</em>: float) -&gt; Callable<div style="text-align: right"><a href="gen_doc/core.py#L76">[source]</a></div></p>
 
 </div>
 
@@ -12307,27 +11980,8 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is a useful function if you want to link the concepts explained to a specific part of a video (for instance, the MOOK). If the link for a youtube video is <a href="https://youtu.be/IPBSB1HLNLo">https://youtu.be/IPBSB1HLNLo</a>, the code is the part from the / to the end.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_video_from_youtube</span><span class="p">(</span><span class="s1">&#39;IPBSB1HLNLo&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12335,12 +11989,309 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt"> </div>
 
 
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=do_annealing_poly></a><strong>do_annealing_poly</strong>(<em>start</em>: float, <em>end</em>: float, <em>pct</em>: float, <em>degree</em>: float) -&gt; float<div style="text-align: right"><a href="gen_doc/core.py#L74">[source]</a></div></p>
 
-<div class="output_html rendered_html output_subarea ">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IPBSB1HLNLo?start=0&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=example_function></a><strong>example_function</strong>(<em>x</em>: int, <em>cls</em>: <a href="gen_doc.core.ipynb#Parentclass">Parentclass</a>=None) -&gt; str<div style="text-align: right"><a href="gen_doc/core.py#L28">[source]</a></div></p>
+<p>Provides an example to how docstrings are resolved</p>
+<ul>
+<li><p><em>x</em>: Number to store</p>
+</li>
+<li><p><em>cls</em>: Class string</p>
+</li>
+</ul>
+<p><em>return</em>: Error string</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=is_iterable></a><strong>is_iterable</strong>(<em>x</em>) -&gt; bool<div style="text-align: right"><a href="gen_doc/core.py#L43">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=is_listy></a><strong>is_listy</strong>(<em>x</em>) -&gt; bool<div style="text-align: right"><a href="gen_doc/core.py#L42">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=is_tuple></a><strong>is_tuple</strong>(<em>x</em>) -&gt; bool<div style="text-align: right"><a href="gen_doc/core.py#L41">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=linked_docstring_example></a><strong>linked_docstring_example</strong>(<em>x</em>: int, <em>s</em>: str=Hello) -&gt; bool<div style="text-align: right"><a href="gen_doc/core.py#L37">[source]</a></div></p>
+<p>Should link to <a href="gen_doc.core.ipynb#example_function"><code>example_function</code></a></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=listify></a><strong>listify</strong>(<em>p</em>=None, <em>q</em>=None) -&gt; Collection<div style="text-align: right"><a href="gen_doc/core.py#L45">[source]</a></div></p>
+<p>Makes p a list that looks like q</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=Parentclass></a><em>class</em> <strong>Parentclass</strong>()<div style="text-align: right"><a href="gen_doc/core.py#L15">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=SmoothenValue></a><em>class</em> <strong>SmoothenValue</strong>(<em>beta</em>: float)<div style="text-align: right"><a href="gen_doc/core.py#L53">[source]</a></div></p>
+<p>To compute the moving average of values</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=SmoothenValue.add_value></a><strong>SmoothenValue.add_value</strong>(<em>self</em>, <em>val</em>: float)<div style="text-align: right"><a href="gen_doc/core.py#L62">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=Subclass></a><em>class</em> <strong>Subclass</strong>(<em>var</em>: int=10) :: Inherits from (<a href="gen_doc.core.ipynb#Parentclass"><code>Parentclass</code></a>)<div style="text-align: right"><a href="gen_doc/core.py#L18">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=Subclass.cmethod></a><strong>Subclass.cmethod</strong>(<em>x</em>)<div style="text-align: right"><a href="gen_doc/core.py#L25">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=Subclass.remove></a><strong>Subclass.remove</strong>(<em>self</em>)<div style="text-align: right"><a href="gen_doc/core.py#L23">[source]</a></div></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<p><a id=Subclass.update></a><strong>Subclass.update</strong>(<em>self</em>)<div style="text-align: right"><a href="gen_doc/core.py#L21">[source]</a></div></p>
+
 </div>
 
 </div>
